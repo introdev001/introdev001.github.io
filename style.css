@@ -1,0 +1,436 @@
+*{
+   font-family:Arial;
+ 
+}
+body{
+   display: flex;
+   flex-direction:column;
+   height: 100vh;
+   margin: 0;
+   padding:  0;
+   background-color: #111;
+}
+/* navbar */
+#navbar{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   background-color: rgb(2, 2, 2);
+   z-index: 1;
+   position: fixed;
+   height: 3.75em;
+   width:  100%;
+   border-bottom: 2px solid #3b3b3b;
+}
+/* links */
+#nav-menu{
+   list-style-type: none;
+   display: flex;
+   justify-content: flex-end;
+   gap:1em;
+  margin: 0%;
+  padding:2em;
+}
+.link{
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+   font-size: 1.2em;
+   margin:0;
+background-color: transparent;
+position: relative;
+}
+#home-link{
+   text-decoration: none;
+   color: rgb(155, 8, 8);
+   font-size: 1.2em;
+   margin:0;
+background-color: transparent;
+position: relative;
+}
+#home-link:hover{
+   text-shadow: 0 0 6px rgb(155, 8, 8), 0 0 12px rgb(155, 8, 8);
+}
+.link:hover{
+   text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff;
+}
+#home-link::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom:0;
+   height: 2px;
+   width:0;
+   background-color: rgb(255, 255, 255);
+   transition: width 0.5s ease;
+}
+#home-link:hover::after{
+   width: 100%;
+   box-shadow: 0 0 8px rgb(255, 255, 255), 0 0 16px rgb(255, 255, 255);
+}
+.link::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom:0;
+   height: 2px;
+   width:0;
+   background-color: rgb(255, 255, 255);
+   transition: width 0.5s ease;
+}
+.link:hover::after{
+   width: 100%;
+   box-shadow: 0 0 8px rgb(255, 255, 255), 0 0 16px rgb(255, 255, 255);
+}
+ #logo{
+   display: inline-block;
+   color: white;
+margin-right: auto;
+padding-left: 1em;
+position: relative; 
+ }
+/* content area */
+ #content{
+   display: flex;
+   align-items: center;
+   padding-top: 3.75em;
+   color: white;
+   gap: 20px;
+   
+ }
+ /* image */
+img{width: 18.75em;
+height: 34.375em;
+border: 2px solid rgb(255, 0, 0);
+border-radius: 50%;
+margin-bottom: 0.625em;
+margin-top: 0.625em;
+}
+ 
+#highlight1{
+   color: rgb(255, 0, 0);
+align-self: flex-start;
+box-sizing: border-box;
+font-size: 2em;
+ }
+#highlight {
+   color: red;
+   font-size: 1em;
+}
+.cover{
+   font-size: 2em;
+   margin: 0;
+}
+#about-me{
+   font-size: 1em;
+}
+#hire{
+   display: flex;
+   justify-content: center;
+}
+#btn{
+   color: rgb(207, 207, 207);
+   background-color: transparent;
+   font-size: larger;
+   padding: 10px 50px;
+   border-radius: 80px;
+   border: 2px solid rgb(107 27 27);
+margin-top: 20px;
+transition: 1s ease;
+ text-decoration: none;
+}
+ 
+  #btn:hover{
+ border: 2px solid  rgb(155, 8, 8);
+  color:rgb(255, 255, 255);
+  background-color:rgb(155, 8, 8);
+  box-shadow: 0 0 8px rgb(155, 8, 8), 0 0 16px rgb(155, 8, 8);
+ }  
+#icon{ 
+gap: 0.5em;
+margin-top: 0.5em;;
+   display: flex;
+   justify-content:center;
+   font-size: larger;
+}
+/*Instagram*/
+#insta{      color: #d62976; 
+   transition: transform 0.2s ease-in-out;
+}
+#insta:hover{
+   transform: scale(1.2);
+   text-shadow: 0 0 6px #d62976, 0 0 12px #d62976;
+}
+/*YouTube*/
+#youtube{
+      color: #FF0000; 
+      transition: transform 0.2s ease-in-out;
+}
+#youtube:hover{
+   transform: scale(1.2);
+   text-shadow: 0 0 1px #FF0000, 0 0 16px #FF0000;
+}
+/*WhatsApp*/
+#whats-app{
+  
+   color: #25D366; 
+transition: transform 0.2s ease-in-out;
+}
+#whats-app:hover{
+   transform: scale(1.2);
+   text-shadow: 0 0 8px #25D366, 0 0 16px #25D366;
+}
+   /* humbargur menu */
+#humbargur{
+   font-size: 1.8em;
+  right: 0.200em;
+   top: 0.300em;
+  color: white;
+  cursor: pointer;
+  position: fixed; 
+  z-index: 3;
+  display: none;
+  cursor: pointer;
+}
+#sidebar{
+   background-color: #111;
+   height: 100vh;
+   width: 15em;
+   right: 0;
+   top: 0;
+   display: inline-block;
+   position: fixed;
+   z-index: 2;
+   border-left: 2px solid #3b3b3b;
+   transform: translatex(100%);
+   transition: transform 1s ease;
+}
+#sidebar.active{
+transform: translatex(0);
+border-left: 2px solid #3b3b3b;
+}
+#side-menu{
+   list-style-type: none;
+   color: white;
+   margin-top:1em;
+   margin-right:1.5em;
+
+}
+.side-links{
+   text-decoration: none;
+   color: white;
+   font-size: 1.1em;
+   margin-top: 2em;
+   margin-left: 2em;
+   display: inline-block;
+   position: relative;
+}
+.side-links:hover{
+   text-shadow: 0 0 8px rgb(248, 247, 247), 0 0 16px rgb(248, 247, 247);
+}
+#side-home-link{
+   color: rgb(155, 8, 8);
+   text-decoration: none;
+   font-size: 1.3em;
+   margin-top: 3em;
+   margin-left: 2em;
+   display: inline-block;
+   position: relative;
+
+}
+#side-home-link:hover{
+   text-shadow: 0 0 6px rgb(155, 8, 8), 0 0 12px rgb(155, 8, 8);
+}
+#side-home-link::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom:0;
+   height: 2px;
+   width:0;
+   background-color: rgb(255, 255, 255);
+   transition: width 0.5s ease;
+}
+#side-home-link:hover::after{
+   width: 100%;
+   box-shadow: 0 0 8px rgb(255, 255, 255), 0 0 16px rgb(255, 255, 255);
+}
+.side-links::after{
+   content: "";
+   position: absolute;
+   left: 0%;
+   bottom: 0%;
+   height: 2px;
+   width:0;
+   background-color: rgb(255, 255, 255);
+   transition: width 0.5s ease;
+}
+.side-links:hover::after{
+   width: 100%;
+   box-shadow: 0 0 8px rgb(248, 247, 247), 0 0 16px rgb(248, 247, 247);
+}
+ /* footer */
+#footer{
+  color: white;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  background-color:  rgb(0, 0, 0);
+  margin-top: auto;
+  gap: 0.625em;
+  border-top: 2px solid #3b3b3b;
+  position: relative;
+}
+#theme-container{
+   background: transparent;
+   color: rgb(250, 250, 250);
+   border-radius: 50px;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   padding: 10px;
+   border: 2px solid rgb(107, 27, 27);
+   font-size: 18px;
+}
+.theme{
+   position: relative;
+   transition: all 1s;
+   padding: 5px;
+}
+.theme:hover{
+   background-color: #FF0000;
+   padding: 5px;
+   border-radius: 50px;
+}
+/* .theme::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   background-color: #FF0000;
+   padding: 0px;
+   border-radius: 50px;
+   transition: all 1s;
+}
+.theme:hover::after{
+   padding: 5px;
+   border-radius: 50px;
+} */
+/* for phones */
+@media(max-width:600px ) {
+/* nav-bar */
+#navbar{
+   display: flex;
+   justify-content:center;
+   align-items: center;
+box-sizing: border-box;
+}
+.nav-links{
+   transition: none;
+}
+#humbargur{
+   display:inline-block;
+}
+#logo{
+margin: 0;
+padding: 0;
+}
+ #logo::after{
+   content: "";
+   position: absolute;
+   width: 0%;
+   height: 0;
+   left: 0%;
+   bottom: 0%;
+   background-color:transparent;
+   transition:none;
+ }
+ #logo{
+   box-shadow:none;
+ }
+ #logo:hover::after{
+   width:0;
+ }
+#nav-menu,.link{
+   display: none;
+}
+/* nav ended */
+/* side bar */
+#side-home-link{
+   box-shadow: none;
+}
+#side-home-link:hover::after{
+   width: 0%;
+ 
+}
+.side-links:hover::after{
+   width: 0%;
+}
+/* side bar ends here */
+/* content-area */
+#whats-app{
+   transition: none;
+   transform:none ;
+}
+#youtube{
+   transition: none;
+   transform:none;
+}
+#insta{
+   transition: none;
+   transform:none;
+}
+#btn{
+   border: 2px solid  rgb(155, 8, 8);
+   color:rgb(255, 255, 255);
+   background-color:rgb(155, 8, 8);
+   box-shadow: 0 0 8px rgb(155, 8, 8), 0 0 16px rgb(155, 8, 8);
+}
+#btn:hover{
+   opacity: 1;
+   transition: none;
+   transform: none;
+   cursor: pointer;
+ }  
+.cover{
+font-size: 1.5em;
+margin: 0;
+padding-left: 0.400em;
+}
+#about-me{
+   font-size: 0.7em;
+   padding-left: 0.500em;
+}
+#content{
+width: auto;
+   flex-direction: column;
+   align-items: center;
+   flex-wrap: wrap;
+margin: auto;
+padding-bottom: 1em;
+ 
+}
+#highlight{
+margin:0;
+padding: 0;
+}
+#highlight1{
+   align-self: center;
+}
+img{
+   width: 12em;
+   height: 12em;
+   border-radius: 50%;
+   margin: 1em auto;
+   display: block;
+ }
+  /* footer */
+ #footer{
+   width:auto;
+   font-size: 10px;
+ }
+}
+/* for laptop */
+@media(min-width:601px){
+
+}
