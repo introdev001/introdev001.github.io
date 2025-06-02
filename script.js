@@ -25,9 +25,12 @@ let theme3 = document.querySelector(".theme3")
 //img and hire btn
 let profile = document.querySelector("#profile")
 let btn = document.querySelector("#btn")
-
+//project section card/site
+let site = document.querySelectorAll(".site")
+let livebtn = document.querySelectorAll(".live-view-btn")
+console.log(livebtn)
 //function for applying classes 
-function addtheme(aqua){
+function addtheme(){
     nav.classList.toggle("blue")
     body.classList.toggle("blue")
     footer.classList.toggle("blue")
@@ -38,6 +41,13 @@ function addtheme(aqua){
     theme1.classList.toggle("blue")
     theme2.classList.toggle("blue")
     home.classList.toggle("blue")
+    site.forEach(i => {
+        i.classList.toggle("blue")
+    })
+    livebtn.forEach(btn => {
+        btn.classList.toggle("blue")
+        console.log(btn)
+    })
     sidehome.classList.toggle("blue")
 highlight[0].classList.toggle("blue")
 highlight[1].classList.toggle("blue")
@@ -55,11 +65,18 @@ function reset(){
     theme2.classList.remove("blue")
     home.classList.remove("blue")
     sidehome.classList.remove("blue")
+    site.forEach(i => {
+        i.classList.remove("blue")
+    })
+    livebtn.forEach(btn => {
+        btn.classList.remove("blue")
+        console.log(btn)
+    })
 highlight[0].classList.remove("blue")
 highlight[1].classList.remove("blue")
 }
  // fnt for making transition smooth
- function smooth(smoothaqua){
+ function smooth(){
     light.style.transition = "1s ease"
     body.style.transition = "1s ease"
     nav.style.transition = "1s ease"
@@ -71,15 +88,19 @@ highlight[1].classList.remove("blue")
     footer.style.transition = "1s ease"
     home.style.transition = "1s ease"
     sidehome.style.transition = "1s ease"
-    blue.style.transition = "1s ease"
+
+    livebtn.forEach(btn => {
+        btn.style.transition = "1s ease"
+        console.log(btn)
+    })
     highlight[0].style.transition = "1s ease"
     highlight[1].style.transition = "1s ease"
     highlight1.style.transition = "1s ease"
  }
  //click event for aqua theme
 light.addEventListener("click" , () => {
-    addtheme(aqua)
-    smooth(aqua)
+    addtheme()
+    smooth()
 })
 //click event for reset theme
 theme1.addEventListener("click" , () => {

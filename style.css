@@ -526,7 +526,7 @@ padding-bottom: 0.5em;
    background-color:rgb(30, 30, 30);
    color: white;
  }
- #footer.blue{
+ footer.blue{
    background-color:rgb(18, 18, 18);
    color: white;
  }
@@ -567,6 +567,17 @@ padding-bottom: 0.5em;
 #side-home-link.blue{
    color: aqua;
 }
+.live-view-btn:hover.blue{
+   background-color: aqua;
+   border: 2px solid aqua;
+   box-shadow: 0 0 8px aqua, 0 0 16px aqua;
+}
+.live-view-btn.blue{
+   border: 2px solid #00ffff;
+}
+.site.blue:hover{
+   box-shadow: 0 0 8px aqua , 0 0 16px aqua;
+}
 /* blue theme */
  
 #projects{
@@ -575,7 +586,7 @@ padding-bottom: 0.5em;
     gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#site{
+.site{
    width: 100%;
     display: flex;
     gap: 1em;
@@ -587,7 +598,7 @@ padding-bottom: 0.5em;
     color: var(--light-text);
     transition: all 0.5s;
 }
-#site a{
+.live-view-btn{
    padding: 10px 40px;
    border-radius: 8px;
    border: 2px solid var(--btn-bor);
@@ -596,18 +607,18 @@ padding-bottom: 0.5em;
    text-decoration: none;
    color: white;
 }
-#site a:hover{
+.live-view-btn:hover{
    background-color: var(--accent-red);
    border: 2px solid var(--accent-red);
    box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red);
 }
-#site:hover{
+.site:hover{
    transform: scale(1.05);
    background-color: #141414;
    color: white;
    box-shadow: 0 0 8px var(--btn-bor) , 0 0 16px var(--btn-bor);
 }
-#ite p{
+.site p{
    color: var(--light-text);
 }
 /* for phones */
@@ -760,12 +771,12 @@ padding: 0;
    flex-direction: column;
 }
 
-#site:hover{
+.site:hover{
    transform: none;
    box-shadow: none;
    background-color: var(--card-co);
 }
-#site a{
+.live-view-btn{
    background-color: var(--accent-red);
    border: 2px solid var(--accent-red);
 }
@@ -879,7 +890,7 @@ padding: 0;
  }
 
 /* blue toggle theme */
- 
+
 #btn.blue{
    border: 2px solid aqua;
    background-color:aqua;
